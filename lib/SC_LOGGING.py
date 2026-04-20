@@ -19,7 +19,6 @@ class DataLog:
             os.mkdir(self._parent_folder)
 
     def open(self, logTime=True) -> str:
-        self._logFile = self.__get_next_file__()
         if logTime:
             self._logFile.write(str(time.time()) + "\n")
             self._logFile.flush()
