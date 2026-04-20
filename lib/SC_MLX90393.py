@@ -2,7 +2,7 @@ import adafruit_mlx90393
 
 class MLX90393:
     def __init__(self, i2c_bus):
-        self.sensor = adafruit_mlx90393.MLX90393(i2c_bus)
+        self.sensor = adafruit_mlx90393.MLX90393(i2c_bus, address=0x18)
     
     @property
     def magnetic(self) -> tuple[float, float, float]:

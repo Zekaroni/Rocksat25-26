@@ -10,7 +10,7 @@ class DataLog:
         self._parent_folder = f"./data/{runID}"
         self.__ensure_folder_exists__()
 
-        self._logFile: TextIOWrapper = open(f"{self._parent_folder}/{prefix}.csv")
+        self._logFile: TextIOWrapper = open(f"{self._parent_folder}/{prefix}.csv", "w")
         self._last_sync = time.time()
         self.open()
 
