@@ -8,7 +8,7 @@ class RocketCamera:
         self._duration   = 0 # Indefinite
         self._parent_folder = f"./data/{runID}"
         self.__ensure_folder_exists__()
-        self._outputFile = f"{self._parent_folder}/video.h264"
+        self._output_path = f"{self._parent_folder}/video.h264"
         self._width      = 1920
         self._height     = 1080
         self._fps        = 30
@@ -42,7 +42,7 @@ class RocketCamera:
     #     pass
 
     def startRecording(self):
-        self._camera.start_and_record_video()
+        self._camera.start_and_record_video(self._output_path)
 
     def stopRecording(self):
         self._camera.stop_recording()
