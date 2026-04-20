@@ -13,6 +13,8 @@ import threading
 import time
 
 def getRunID():
+    if not os.path.exists("./data"):
+        os.mkdir("./data")
     return len(next(os.walk("./data"))[1]) + 1
 
 def bno_loop(runID, i2c):
