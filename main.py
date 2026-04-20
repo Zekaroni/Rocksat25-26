@@ -13,7 +13,7 @@ import threading
 import time
 
 def getRunID():
-    return len(os.walk("./data")[1]) + 1
+    return len(next(os.walk("./data"))[1]) + 1
 
 def bno_loop(runID, i2c):
     bno055 = BNO055(i2c)
