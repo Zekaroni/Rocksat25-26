@@ -1,0 +1,3 @@
+adafruit_bno055
+adafruit-circuitpython-mlx90393
+gpiozero
