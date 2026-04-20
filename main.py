@@ -61,8 +61,8 @@ if __name__ == "__main__":
     
     threading.Thread(target=bno_loop, args=(runID, i2c), daemon=True).start()
     threading.Thread(target=mlx_loop, args=(runID, i2c), daemon=True).start()
-    threading.Thread(target=temp_loop, args=(runID), daemon=True).start()
-    threading.Thread(target=sys_loop, args=(runID), daemon=True).start()
+    threading.Thread(target=temp_loop, args=(runID,), daemon=True).start()
+    threading.Thread(target=sys_loop, args=(runID,), daemon=True).start()
     
     try:
         while True:
