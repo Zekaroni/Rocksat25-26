@@ -1,4 +1,4 @@
-adafruit_bno055
+adafruit-circuitpython-bno055
 adafruit-circuitpython-mlx90393
 gpiozero
 picamera2
