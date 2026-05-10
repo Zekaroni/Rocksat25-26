@@ -2,7 +2,7 @@ import adafruit_bno055
 
 class BNO055:
     def __init__(self, i2c_bus):
-        self.sensor = adafruit_bno055.BNO055_I2C(i2c_bus, address=0x1a)
+        self.sensor = adafruit_bno055.BNO055_I2C(i2c_bus, address=0x0c)
         # 0x14 is the starting register for Gyro data
         self.register_address = bytearray([0x14])
         
