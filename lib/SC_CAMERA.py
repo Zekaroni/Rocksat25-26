@@ -13,6 +13,10 @@ class RocketCamera:
         self._height     = 1080
         self._fps        = 30
 
+        config = self._camera.create_video_configuration(main={"size": (self._width, self._height)})
+        config["main"]["framerate"] = self._fps
+        self._camera.configure(config)
+
     def __ensure_folder_exists__(self):
         if not os.path.exists(self._parent_folder):
             os.mkdir(self._parent_folder)
