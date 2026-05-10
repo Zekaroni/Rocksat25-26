@@ -13,7 +13,7 @@ class RocketCamera:
         self._height     = 1080
         self._fps        = 30
 
-        config = self._camera.create_video_configuration(main={"size": (self._width, self._height)})
+        config = self._camera.create_video_configuration(main={"size": (self._width, self._height)},sensor={"size": (2328, 1748)})
         config["main"]["framerate"] = self._fps
         self._camera.configure(config)
 
